@@ -1,0 +1,50 @@
+<div class="container-fluid main">
+    <div class="container p-2 ">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-12">
+                <div class="p- m-1">
+                    <img [src]="book.image" class="img-fluid" alt="book.title">
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-6 col-12">
+                <div class="p-2">
+                    <h2>{{book.title}}</h2>
+                    <p class="text-muted">{{book.subtitle}}</p>
+                    <hr>
+                    <div class="d-flex">
+                        <div class="mx-2">
+                            <p><strong>Liked By People </strong> ({{book.likes}})</p>
+                        </div>
+                        <div class="mx-3">
+                            <p><strong>Author(By) : </strong>{{book.author}}</p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="mx-2">
+                            <p>
+                                <strong>Price :</strong> <span>₹</span>{{book.price}}
+                            </p>
+                        </div>
+                        <div class="mx-3">
+                            <p>
+                                <strong>Pages :</strong> {{book.pages}}
+                            </p>
+                        </div>
+                    </div>
+                    <p>
+                        <strong>Publisher : </strong> {{book.publisher}}
+                    </p>
+                    <p>
+                        <strong>Published On : </strong> {{book.published}}
+                    </p>
+                    <p><strong>Description : </strong>{{book.description}}</p>
+                    <div class="d-fles">
+                        <p>Add to Favourite <img src="../../../assets/img/heart.png" alt=""></p>
+                        <button class="btn btn-dark">Add to cart</button>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

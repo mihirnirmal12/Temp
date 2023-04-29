@@ -1,0 +1,28 @@
+<div class="container-fluid backgroud">
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-3 col-lg-2 col-sm-4 col-10  m-3 bg-light border-secondary d-flex" *ngFor="let bok of books">
+                <div class="d-flex">
+                    <div class="m-auto">
+                        <img [src]="bok.image" (click)="getDetails(bok.id,bok.title)" [alt]=" bok.title " class="bookimg my-3 img-fluid shadow-sm ">
+                        <p class="text-muted text-center "><strong>By: </strong>{{bok.author}}</p>
+                        <div class="d-flex justify-content-between">
+                            <p><strong>likes:</strong> {{bok.likes}}</p>
+                            <p> <strong>price: </strong><span>₹</span>{{bok.price}}</p>
+                        </div>
+                        <div>
+
+                            <ng-container *ngIf="islike(bok.id)==true else notlike ">
+                                <a (click)="unlikebook(bok.id) ">add to Watchlist<img class="px-2" src="../../../assets/img/heart-fill (2).png " alt="dislike "></a>
+                            </ng-container>
+                            <ng-template #notlike>
+                                <a (click)="likebook(bok.id) ">add to Watchlist<img class="px-2" src="../../../assets/img/heart.png " alt="like "></a>
+                            </ng-template>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
