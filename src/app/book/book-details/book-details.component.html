@@ -39,8 +39,15 @@
                     </p>
                     <p><strong>Description : </strong>{{book.description}}</p>
                     <div class="d-fles">
-                        <p>Add to Favourite <img src="../../../assets/img/heart.png" alt=""></p>
-                        <button class="btn btn-dark">Add to cart</button>
+                        <div>
+                            <ng-container *ngIf="islike(book.id)==true else notlike ">
+                                <a (click)="unlikebook(book.id) ">add to Watchlist<img class="px-2" src="../../../assets/img/heart-fill (2).png " alt="dislike "></a>
+                            </ng-container>
+                            <ng-template #notlike>
+                                <a (click)="likebook(book.id) ">add to Watchlist<img class="px-2" src="../../../assets/img/heart.png " alt="like "></a>
+                            </ng-template>
+                        </div>
+                        <button class="btn btn-dark" (click)="addCart(book.id)">Add to cart</button>
                     </div>
                     <hr>
                 </div>

@@ -11,7 +11,6 @@
                             <p> <strong>price: </strong><span>₹</span>{{bok.price}}</p>
                         </div>
                         <div>
-
                             <ng-container *ngIf="islike(bok.id)==true else notlike ">
                                 <a (click)="unlikebook(bok.id) ">add to Watchlist<img class="px-2" src="../../../assets/img/heart-fill (2).png " alt="dislike "></a>
                             </ng-container>

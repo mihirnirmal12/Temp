@@ -11,6 +11,8 @@ import { BookComponent } from './book/book/book.component';
 import { HomeComponent } from './home/home.component';
 import { BookDetailsComponent } from './book/book-details/book-details.component';
 import { MywatchlistComponent } from './user/mywatchlist/mywatchlist.component';
+import { UserCartComponent } from './user/user-cart/user-cart.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { MywatchlistComponent } from './user/mywatchlist/mywatchlist.component';
     BookComponent,
     HomeComponent,
     BookDetailsComponent,
-    MywatchlistComponent
+    MywatchlistComponent,
+    UserCartComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
